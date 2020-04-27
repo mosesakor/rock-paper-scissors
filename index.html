@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>rocks-paper-scissors</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <script>
+
+    
+
+    function computerPlay() {
+       let randomInt = random(3);
+
+       switch (randomInt) {
+           case 1:
+           return "rock";
+           case 2: 
+           return "paper";
+           case 3:
+           return "scissors";
+       }
+
+    }
+    let playerScore = 0;
+    let comScore = 0;
+    let status;
+    //let playerOption = prompt("Make a guess: ");
+    let currentRound;
+    let prompter;
+   
+    function playRound(playerSelection, computerSelection) {
+       // playerSelection = playerSelection.toLowerCase()
+
+        do {
+            playerSelection = prompt("Enter a guess: ");
+        } while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors");
+        console.log(playerSelection);
+
+        if (playerSelection == "rock" && computerSelection == "paper") {
+            status = "Lose";
+            comScore += 1;
+            return "You Lose! Paper beats rock";
+        }
+        else if (playerSelection == "rock" && computerSelection == "scissors") {
+            status = "Win"
+            playerScore += 1;
+            return "You Win! Rock beats scissors";
+        }
+        else if (playerSelection == "paper" && computerSelection == "rock") {
+            status = "Win"
+            playerScore += 1;
+            return "You Win! Paper beats Rock";
+        }
+        else if (playerSelection == "paper" && computerSelection == "scissors") {
+            status = "Lose"
+            comScore += 1;
+            return "You Lose, Scissors beats rock";
+        }
+        else if (playerSelection == "scissors" && computerSelection == "paper") {
+            status = "Win";
+            playerScore += 1;
+            return "You Win, Scissors beats Paper";
+        }
+        else if (playerSelection == "scissors" && computerSelection == "rock") {
+            status = "Win";
+            playerScore += 1;
+            return "You Lose, Rock beats Scissors";
+        } else if (playerSelection == computerSelection) {
+            status = "Tie";
+            comScore += 1;
+            playerScore += 1;
+            return "It's a tie!";
+        } else {
+        return "error";
+        }
+
+    }
+    
+
+    //prompt("Choose your element: ")
+
+    function game() {
+        playerScore = 0;
+        comScore = 0;
+        for (let i = 1; i <= 5; i++) {
+            playRound(prompter, computerPlay());
+
+            if (status == "Win") {
+                console.log("You win! " + "Your score: " + playerScore + "  " + "Computer's score: " + comScore);
+
+            }
+            else if (status == "Tie") {
+            console.log("It's a tie " + "Your score: " + playerScore + "  " + "Computer's score: " + comScore);
+            }
+            else {
+                console.log("You lose! " + "Your score: " + playerScore + "  " + "Computer's score: " + comScore)
+            }
+
+        }
+      //  console.log(playerScore);
+       // console.log(comScore);
+
+        if (playerScore > comScore) {
+            return "You win! you scored " + playerScore;
+        } else if (playerScore == comScore) {
+            return "It's a tie";
+        } else {
+            return "You lose!";
+        }
+
+    }
+
+    // returns a random number.
+    function random(n) {
+        return Math.floor(Math.random() * n + 1)
+    }
+
+    function promptUser() {
+
+        let guess = prompt("Enter a guess: ");
+        return guess;
+    }
+  </script>
+</body>
+</html>
