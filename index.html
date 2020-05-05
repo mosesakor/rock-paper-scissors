@@ -33,13 +33,12 @@
     let playerScore = 0;
     let comScore = 0;
     let status;
-    //let playerOption = prompt("Make a guess: ");
+    let playerOption = prompt("Make a guess: ");
     let currentRound;
-    let prompter;
+   
    
     function playRound(playerSelection, computerSelection) {
 	playerSelection = playerSelection.toLowerCase();
-	playerSelection = prompt("Enter a guess: ");
 
 
         if (playerSelection == "rock" && computerSelection == "paper") {
@@ -126,6 +125,8 @@
         let guess = prompt("Enter a guess: ");
         return guess;
     }
+
+playround(playerOption, computerPlay());
   </script>
 </body>
 </html>
