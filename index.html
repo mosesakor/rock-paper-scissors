@@ -143,9 +143,7 @@
             playerScore = 0;
         }
 
-        function gameconditions() {
 
-        }
 
         function startGame() {
             player = 0;
@@ -185,6 +183,18 @@
         scissors.addEventListener('click', playGame);
 
         function playGame(e) {
+
+            if (rounds == 5) {
+                if (player > com) {
+                    alert(`You win! You got ${player} point(s) while the AI got ${com}`);
+                }
+                else if (player < com) {
+                    alert(`You lose! You got ${player} point(s) while the AI got ${com}`);
+                } else {
+                    alert(`It\'s a tie! You have shared a total of ${player} point(s) with the AI.`);
+                }
+                startGame();
+            }
 
             comInput = computerPlay();
 
@@ -266,18 +276,8 @@
                 return;
             }
 
-            if (rounds == 6) {
 
-                if (player > com) {
-                    alert(`You win! You got ${player} points while the AI got ${com}`);
-                }
-                else if (player < com) {
-                    alert(`You lose! You got ${player} points while the AI got ${com}`);
-                } else {
-                    alert(`It\'s a tie! You have shared a total of ${player} points with the AI.`);
-                }
-                startGame();
-            }
+
 
             /*if (rounds == 4) {
                 startGame();
