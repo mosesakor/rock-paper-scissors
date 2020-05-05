@@ -81,41 +81,6 @@
                     return "scissors";
             }
 
-<body>
-
-<p>Please use playRound(<option>, computerPlay())</p>
-  <script>
-
-    
-
-    function computerPlay() {
-       let randomInt = random(3);
-
-       switch (randomInt) {
-           case 1:
-           return "rock";
-           case 2: 
-           return "paper";
-           case 3:
-           return "scissors";
-       }
-
-    }
-    let playerScore = 0;
-    let comScore = 0;
-    let status;
-    let playerOption = prompt("Make a guess: ");
-    let currentRound;
-   
-   
-    function playRound(playerSelection, computerSelection) {
-	playerSelection = playerSelection.toLowerCase();
-
-
-        if (playerSelection == "rock" && computerSelection == "paper") {
-            status = "Lose";
-            comScore += 1;
-            return "You Lose! Paper beats rock";
         }
         function playRound(playerSelection, computerSelection) {
             // playerSelection = playerSelection.toLowerCase()
@@ -196,10 +161,6 @@
 
         }
 
-    }
-
-   // playRound(playerOption, computerPlay());
-    
 
         const rock = document.querySelector('#rocks');
         const paper = document.querySelector('#paper');
@@ -305,28 +266,7 @@
                 return;
             }
 
-<<<<<<< HEAD
             if (rounds == 6) {
-=======
-        }
-      //  console.log(playerScore);
-       // console.log(comScore);
-
-      /*  if (playerScore > comScore) {
-            return "You win! you scored " + playerScore;
-        } else if (playerScore == comScore) {
-            return "It's a tie";
-        } else {
-            return "You lose!";
-        }
-*/
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 13d0be85ed0b61f95b76d5744302461f6ef323e2
-=======
->>>>>>> 13d0be85ed0b61f95b76d5744302461f6ef323e2
-=======
->>>>>>> 13d0be85ed0b61f95b76d5744302461f6ef323e2
 
                 if (player > com) {
                     alert(`You win! You got ${player} points while the AI got ${com}`);
@@ -348,7 +288,6 @@
         }
 
 
-<<<<<<< HEAD
         newGame.addEventListener('click', startGame);
         rock.addEventListener('click', playGame);
         paper.addEventListener('click', playGame);
@@ -357,19 +296,3 @@
 </body>
 
 </html>
-=======
-        let guess = prompt("Enter a guess: ");
-        return guess;
-    }
-
-playRound(playerOption, computerPlay());
-  </script>
-</body>
-</html>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 13d0be85ed0b61f95b76d5744302461f6ef323e2
-=======
->>>>>>> 13d0be85ed0b61f95b76d5744302461f6ef323e2
-=======
->>>>>>> 13d0be85ed0b61f95b76d5744302461f6ef323e2
