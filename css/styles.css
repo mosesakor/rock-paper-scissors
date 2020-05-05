@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+}
+
+section {
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid red;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.resetBtn {
+    display: block;
+    margin: 5rem auto;
+    text-align: center;
+    width: 15rem;
+    height: 5rem;
+}
+
+.btn {
+    margin: 2rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+.btn-container {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.scoreBoard {
+    padding: 2rem;
+    border: 1px solid blue;
+    width: 50%;
+    margin: 2rem auto;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.info-box,
+.score-box {
+    color: rgba(192, 192, 192, 1);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+
+.score-box {
+    color: black;
+    margin-top: 2rem;
+    font-size: 2.7rem;
+}
+
+.options {
+
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.statTitle {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.stats {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 1.5rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
